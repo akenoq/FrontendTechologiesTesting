@@ -1,6 +1,5 @@
+/* eslint-disable no-undef */
 "use strict";
-
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: "./static/modules/Main.js",
@@ -16,7 +15,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                loader: 'url-loader'
+                loader: "url-loader"
             },
             {
                 test: /\.scss$/,
@@ -32,13 +31,5 @@ module.exports = {
                 }]
             }
         ]
-    },
-    plugins: [
-        new ExtractTextPlugin({
-            filename: "./static/src/main.css"
-        })
-    ],
-    node: {
-        fs: 'empty'
     }
 };
